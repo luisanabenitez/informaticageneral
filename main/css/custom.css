@@ -26,6 +26,15 @@ color: #4E03AC;
 font-weight: 600;
 }
 
+.mymarginright {
+    margin-right: 64px;
+}
+
+.mymargintext {
+padding-left: 25%;
+padding-right: 25%;
+}
+
 @media (max-width: 768px){
     
    .container {
@@ -35,9 +44,34 @@ font-weight: 600;
    .mymarginbottom {
     margin-bottom: 1.5rem;
 }
+.mymargintext {
+    padding-left: 10%;
+    padding-right: 10%;
+    }
+
 }
 
+@media (max-width: 600px){
+    
+    .mymarginright {
+        margin-right: 0px;
+        margin-bottom: 24px;
+    } 
+    .centerimg{
+        display: flex;
+        align-content: center;
+    }
 
+    .imgsmall {
+        width: 50%;
+        height: 50%;
+    }
+    .mymargintext {
+        padding-left: 5%;
+        padding-right: 5%;
+        }
+}
+ 
 .mylink:focus {
     color: #330073;
 }
@@ -104,6 +138,7 @@ font-weight: 600;
 
 .myimg {
     max-width: 450px;
+    max-height: 450px;
 }
 
 
