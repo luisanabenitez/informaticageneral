@@ -1,0 +1,291 @@
+
+* {
+font-family: 'Nunito Sans', sans-serif;
+box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Libre Baskerville', serif;
+}
+
+h2 {
+    font-family: 'Libre Baskerville', serif;
+}
+
+body {
+    display: block;
+    overflow-x: hidden;
+}
+
+a:hover{
+    font-weight: 700;
+}
+
+.mylink {
+color: #4E03AC;
+font-weight: 600;
+}
+
+@media (max-width: 768px){
+    
+   .container {
+       margin-bottom: 1rem;
+   }
+
+   .mymarginbottom {
+    margin-bottom: 1.5rem;
+}
+}
+
+
+.mylink:focus {
+    color: #330073;
+}
+
+.mylink:hover {
+    color: #330073;
+}
+
+.bgwhite {
+    background-color: white;
+}
+
+.bgpurple {
+    background-color: #4E03AC;
+    border: 0;
+}
+
+.strokepurple {
+    border-style: solid;
+    border-color: #330073;
+    color: #330073;
+}
+
+.bglightpurple {
+    background-color: #6700E8;
+    border: 0;
+}
+
+.bglightblue{
+    background-color: #D7FBFF;
+}
+
+.bgsmagenta{
+    background-color: #E30088;
+}
+
+.bradius {
+    border-radius: 16px;
+}
+
+.tarotcard {
+    height: 120px;
+    width: 246px;
+}
+
+.btn-primary:hover {
+    background-color: #330073;
+    border: 0;
+  }
+
+.cheight {
+    height: 700px;
+    justify-content: center;
+}
+
+.cform {
+    height: 400px;
+    background-color: aliceblue;
+}
+
+.red{
+    color: red;
+}
+
+.myimg {
+    max-width: 450px;
+}
+
+
+.empty {
+    border-color: red;
+}
+
+.textgolden {
+    color: #F7AF18;
+}
+
+
+.mycontainer {
+    width: 90%;
+    max-width: 1200px;
+    max-height: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.myslider {
+    padding: 40px 0;
+}
+
+.slider__container {
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    align-items: center;
+    gap: 1em;
+
+}
+
+.slider__body {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    opacity: 0;
+    pointer-events: none;
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    align-items: center;
+    transition: opacity 1.5s;
+}
+
+.slider__texts {
+    max-width: 600px;
+}
+
+.slider__arrow {
+    cursor: pointer;
+    width: 90%;
+}
+
+.slider__arrow:nth-of-type(2){
+    justify-self: end;
+}
+
+.slider__review {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+.mysubtitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.slider__body--show {
+    opacity: 1;
+    pointer-events: unset;
+}
+
+.slider__img{
+    width: 680px;
+    width: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px){
+    
+    .slider__body{
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content 1fr;
+        gap: 1em;
+    } 
+    .slider__picture{
+        grid-row: 1/2;
+    }
+    
+    .slider__img {
+        width: 210px;
+        height: 210px;
+    }
+}
+
+@media (max-width: 425px){
+    
+    .slider__container{
+        grid-template-columns: 25px 1fr 25px;
+    } 
+
+    .slider__arrow{
+        width: 100%;
+
+    }
+    .slider__picture{
+        grid-row: 1/2;
+    }
+    
+    .slider__img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .mysubtitle {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .slider__review {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}
+
+.myquiz {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0;
+}
+
+.quiz-container {
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    width: 600px;
+    overflow: hidden;
+}
+
+.quiz-header{
+    padding: 4rem;
+}
+
+.quizh2{
+    padding: 1rem;
+    text-align: center;
+    margin: 0;
+}
+
+.quizul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.quizul li{
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.quizul li label{
+    cursor: pointer;
+}
+
+.btnquiz:hover {
+  background-color: #330073;
+}
+
+.btnquiz:focus {
+    background-color: #8727FF;
+  }
+
+.vertical-center {
+    display: flex;
+  align-items: center;
+}
+
+.btn-light:hover{
+    background-color: #330073;
+    color: white;
+    border: 0;
+}
