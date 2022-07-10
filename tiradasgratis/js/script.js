@@ -7,7 +7,7 @@ function card (name, description, image){
     this.name = name;
     this.description = description;
     this.image = image;
-}; 
+}
 
 // Array con toda la informacion de cada carta.
 var deck = [
@@ -45,7 +45,7 @@ function getRandom(num){
 function generarCarta(){
   var index = getRandom(22);
   var currentCard = deck[index];
-  document.getElementById("tarotcard").innerHTML = '<img src=img/' + currentCard.image + '.png><h3>' + currentCard.name + '</h3><p>' + currentCard.description + '</p>'
+  document.getElementById("tarotcard").innerHTML = '<img src=img/' + currentCard.image + '.png><h3>' + currentCard.name + '</h3><p>' + currentCard.description + '</p>';
 }
 
 
@@ -57,7 +57,7 @@ function oraclecard (name, description, image){
     this.name = name;
     this.description = description;
     this.image = image;
-  }; 
+  }
   
   var oracledeck = [
     new oraclecard('Sí','Adentrate a lo desconocido','oracle-1'),
@@ -70,4 +70,4 @@ function oraclecard (name, description, image){
     var index = getRandom(3);
     var currentoracle = oracledeck[index];
     document.getElementById("tarotcard").innerHTML = '<img src=img/' + currentoracle.image + '.png><h3>' + currentoracle.name + '</h3><p>' + currentoracle.description + '</p>';
-  };
+  }
