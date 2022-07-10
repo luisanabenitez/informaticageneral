@@ -61,7 +61,7 @@
           a: "Acción en el mundo",
           b: "Momento de inicio, inexperiencia",
           c: "Momento de puente y pasaje a otro estadio",
-          d: "Un clico llegado a su fin",
+          d: "Un ciclo llegado a su fin",
           correct: "b"
         },
   
@@ -97,62 +97,62 @@
         
      ];
   
-     const quiz= document.getElementById("quiz")
-     const answerEls = document.querySelectorAll(".answer")
-     const questionEl = document.getElementById("question")
-     const a_text = document.getElementById("a_text")
-     const b_text = document.getElementById("b_text")
-     const c_text = document.getElementById("c_text")
-     const d_text = document.getElementById("d_text")
-     const submitBtn = document.getElementById("mysubmit")
+     const quiz= document.getElementById("quiz");
+     const answerEls = document.querySelectorAll(".answer");
+     const questionEl = document.getElementById("question");
+     const a_text = document.getElementById("a_text");
+     const b_text = document.getElementById("b_text");
+     const c_text = document.getElementById("c_text");
+     const d_text = document.getElementById("d_text");
+     const submitBtn = document.getElementById("mysubmit");
   
-     let currentQuiz= 0
-     let score = 0
+     let currentQuiz= 0;
+     let score = 0;
      
-     loadQuiz()
+     loadQuiz();
      
      function loadQuiz(){
-       deselectAnswers()
-       const currentQuizData = quizData[currentQuiz]
+       deselectAnswers();
+       const currentQuizData = quizData[currentQuiz];
   
-       questionEl.innerText = currentQuizData.question
-       a_text.innerText = currentQuizData.a
-       b_text.innerText = currentQuizData.b
-       c_text.innerText = currentQuizData.c
-       d_text.innerText = currentQuizData.d
+       questionEl.innerText = currentQuizData.question;
+       a_text.innerText = currentQuizData.a;
+       b_text.innerText = currentQuizData.b;
+       c_text.innerText = currentQuizData.c;
+       d_text.innerText = currentQuizData.d;
      }
   
      function deselectAnswers() {
-      answerEls.forEach(answerEl => answerEl.checked = false)
+      answerEls.forEach(answerEl => answerEl.checked = false);
   }
   
   function getSelected() {
-    let answer
+    let answer;
     answerEls.forEach(answerEl => {
         if(answerEl.checked) {
-            answer = answerEl.id
+            answer = answerEl.id;
         }
-    })
-    return answer
+    });
+    return answer;
   }
   
       submitBtn.addEventListener('click', () => {
-        const answer = getSelected()
+        const answer = getSelected();
         if(answer) {
            if(answer === quizData[currentQuiz].correct) {
-               score++
+               score++;
            }
     
-           currentQuiz++
+           currentQuiz++;
     
            if(currentQuiz < quizData.length) {
-               loadQuiz()
+               loadQuiz();
            } else {
                quiz.innerHTML = `
                <h2>Respondiste ${score}/${quizData.length} preguntas correctamente</h2>
     
                <button class="btn btn-primary btn-large bgpurple w-100 btnquiz" onclick="location.reload()">Reload</button>
-               `
+               `;
            }
         }
-    })
+    });
