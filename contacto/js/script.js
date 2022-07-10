@@ -1,3 +1,4 @@
+
 // Validador de formulario
 
 
@@ -12,5 +13,5 @@ $(document).ready(function(){
      }
     });
     return $flag; 
-  })
-})
+  });
+});
